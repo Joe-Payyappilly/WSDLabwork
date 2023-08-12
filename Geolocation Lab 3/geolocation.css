@@ -1,0 +1,31 @@
+body{
+  background-image: url("3.jpg");
+}
+.map
+{
+  display: flex;
+  justify-content: center;
+}
+
+
+.canvas-element
+{  
+
+  display: flex;
+  justify-content:center;
+  margin: 30px 0 30px 0;
+}
+
+.col 
+{
+  border-style: solid;
+  padding: 30px;
+  margin: 5px;
+  background-color: azure;
+}
+
+.container-container
+{
+  
+  margin-top: 50px;
+}
