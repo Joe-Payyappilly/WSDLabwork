@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Catalog</title>
+  <style>
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      width: 300px;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Product Catalog</h1>
+  <input type="text" id="searchInput" placeholder="Search products">
+  <select id="sortSelect">
+    <option value="name">Sort by Name</option>
+    <option value="price-asc">Sort by Price (Low to High)</option>
+    <option value="price-desc">Sort by Price (High to Low)</option>
+  </select>
+  <div id="productList"></div>
+
+  <script src="product.js"></script>
+</body>
+</html>
