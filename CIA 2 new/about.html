@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script type='text/javascript'>
+        function GetMap() {
+            var map = new Microsoft.Maps.Map('#myMap', {
+                credentials:'AjGQvM-Te-ItUDznc7qR8W8mBGR-DCnoFpAJoO3CDgfU2QjVhLPwTE8V1AalG_Yy'
+            });
+    
+           
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var loc = new Microsoft.Maps.Location(
+                    position.coords.latitude,
+                    position.coords.longitude);
+    
+                
+                var pin = new Microsoft.Maps.Pushpin(loc);
+                map.entities.push(pin);
+    
+                
+                map.setView({ center: loc, zoom: 15 });
+            });
+        }
+        </script>
+        <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Culinary Delights</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About us</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="about-us-container" style="background-image: url(contacthero.avif);">
+        <div class="about-us-content">
+            <h2>About Us</h2>
+            <p>Welcome to Culinary Delights, where exquisite flavors and remarkable experiences come together. Our restaurant is a place where culinary artistry meets exceptional hospitality.</p>
+            <p>At Culinary Delights, we are passionate about creating memorable dining moments. Our chefs masterfully craft dishes that tantalize your taste buds, using only the finest ingredients sourced locally and globally.</p>
+            <p>We believe in the power of exceptional service. Our dedicated staff is committed to ensuring that every visit is a delightful journey for your senses. Whether it's a romantic dinner, a family celebration, or a business meeting, we cater to your every need.</p>
+            <p>Discover a world of flavors at Culinary Delights. We invite you to savor the fusion of tradition and innovation on every plate. Join us and embark on a gastronomic adventure like no other.</p>
+        </div>
+          <div style="font-size: 30px;">JOIN US:</div>
+        <div class="map" style="font-size: 30px;display: flex;justify-content: center;">
+            
+            <div id="myMap" style="width:800px;height:500px;border-style: solid;"></div>
+            </div>
+    
+    </div>
+
+
+    
+
+    <footer class="footer text-center bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="h3">Phone Number: xxx-xxx-xxxx</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
